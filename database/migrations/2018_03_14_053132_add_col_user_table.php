@@ -11,7 +11,7 @@ class AddColUserTable extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('phone')->after('password');
             $table->string('address')->after('phone');
-            $table->integer('level')->after('address')->default(config('user.level.user'));
+            $table->integer('level')->after('address')->default(config('user.level.member'));
         });
     }
     
