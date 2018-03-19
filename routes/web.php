@@ -14,7 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('dangky','RegisterController@index')->name('dangky');
+Route::post('getuser','RegisterController@getUser')->name('getuser');
+Route::get('login','LoginController@index')->name('login');
+Route::post('dangnhap','LoginController@getLogin')->name('dangnhap');
+Route::get('dangxuat','LoginController@getLogout')->name('dangxuat');

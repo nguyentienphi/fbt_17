@@ -13,3 +13,9 @@ let mix = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
+mix.js('resources/assets/js/jquery-3.3.1.min.js', 'public/js')
+   .sass('resources/assets/css/form.css', 'public/css');
+mix.styles([
+    'resources/assets/css/bootstrap-theme.min.css',
+    'resources/assets/css/bootstrap.min.css',
+    ], 'public/css/all.min.css');
