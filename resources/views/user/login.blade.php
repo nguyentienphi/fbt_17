@@ -12,7 +12,7 @@
     <div class="container">
         <div class="col-md-8 col-md-offset-2">
             <div class="row">
-                @include('commont.errors')
+                @include('common.errors')
                 <div class="form">
                 {{ Form::open(['route' => 'getlogin']) }}
                     {{ method_field('POST') }}
@@ -44,7 +44,7 @@
                         <div class="col-md-8 col-md-offset-1">
                             <div class="login">
                                 <a href="#">Quên mật khẩu?</a>
-                                    {{ Form::submit(trans(message.login), ['class' => 'btn btn-primary']) }}
+                                    {{ Form::submit(trans('message.login'), ['class' => 'btn btn-primary']) }}
                             </div>
                             <a href="{{route('dangky')}}" class="add">{{trans('message.add')}}</a>
                         </div>

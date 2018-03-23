@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                                {!! Form::label('trans(message.email_register)',null,['class' => 'col-md-5 control-label']) !!}
+                                {!! Form::label(trans('message.email_register'),null,['class' => 'col-md-5 control-label']) !!}
                             <div class="col-md-10">
                                 {{ Form::text('email', null, ['class' => 'form-control']) }}
                                 @if ($errors->has('email'))

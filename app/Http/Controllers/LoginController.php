@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\LoginRequest;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class LoginController extends Controller
 {
@@ -21,7 +23,7 @@ class LoginController extends Controller
         if (isset($request->remember))
             $remember_me =true;
         if (Auth::attempt($login, $remember_me)) {
-           return redirect()->route('home');
+           return redirect()->route('dashboard');
         }
             $request->session()->flash('status',trans('message.login_fails'));
 
@@ -31,6 +33,6 @@ class LoginController extends Controller
     {
         Auth::logout();
         
-        return redirect()->route('login');
+        return redirect()->route('dangnhap');
     }    
 }

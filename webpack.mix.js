@@ -19,3 +19,5 @@ mix.styles([
     'resources/assets/css/bootstrap-theme.min.css',
     'resources/assets/css/bootstrap.min.css',
     ], 'public/css/all.min.css');
+mix.copy('resources/assets/image', 'public/image');
+

@@ -25,7 +25,7 @@ class RegisterController extends Controller
                 'address' => $request->address
             ]);
             $request->session()
-            ->flash('status', trans('message.add_sucessfull'));
+            ->flash('status', trans('message.addsucessfull'));
         } catch(Exception $e) {
             $request->session()
             ->flash('status', trans('message.add_fails'));

@@ -9,7 +9,7 @@ class Book extends Model
     protected $fillable = [
         'name',
         'author',
-        'number_page',
+        'page_number',
         'description',
         'category_id',
         'status'
